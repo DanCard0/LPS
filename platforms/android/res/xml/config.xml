@@ -22,12 +22,12 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
-    <name>GPS-MAP</name>
+    <name>Indoor Positioning</name>
     <description>
-        An Ionic Framework and Cordova project.
+        Mobile app for Indoor Positioning System Prototype
     </description>
-    <author email="you@example.com" href="http://example.com.com/">
-      CIT
+    <author email="daniel.cardozo0621@gmail.com" href="https://twitter.com/Dan_Card/">
+      Daniel Cardozo
     </author>
     <content src="index.html" />
     <access origin="*" />

@@ -37,37 +37,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     templateUrl: 'templates/tabs.html'
   })
 
-  .state('tab.map', {
-    url: '/map',
+  .state('tab.lps', {
+    url: '/lps',
     views: {
-      'tab-map': {
-        controller: 'LocationCtrl',
-        templateUrl: 'templates/tab-map.html'
+      'tab-lps': {
+        controller: 'LpsCtrl',
+        templateUrl: 'templates/lps.html'
       }
     }
   })
 
-  .state('tab.ceas', {
-      url: '/ceas',
-      views: {
-        'tab-ceas': {
-          controller: 'CeasCtrl',
-          templateUrl: 'templates/tab-ceas.html'          
-        }
-      }
-    })
-
-   .state('tab.walk', {
-      url: '/walk',
-      views: {
-        'tab-walk': {
-          controller: 'WalkCtrl',
-          templateUrl: 'templates/tab-walk.html'
-        }
-      }
-    })
-
-   .state('tab.walkHistory', {
+  .state('tab.walkHistory', {
       url: '/walkHistory',
       views: {
         'tab-walkHistory': {
@@ -77,27 +57,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
-    .state('tab.cea-detail', {
-      url: '/ceas/:ceaId',
-      views: {
-        'tab-ceas': {
-          controller: 'CeaDetailCtrl',
-          templateUrl: 'templates/cea-detail.html'          
-        }
-      }
-    })
-
-    .state('tab.cea-route', {
-      url: '/ceas/:ceaId/route',
-      views: {
-        'tab-ceas': {
-          controller: 'RouteCtrl',
-          templateUrl: 'templates/tab-route.html'          
-        }
-      }
-    });
-
   // Vista por defecto
-  $urlRouterProvider.otherwise('/tab/map');
+  $urlRouterProvider.otherwise('/tab/walkHistory');
 
 });

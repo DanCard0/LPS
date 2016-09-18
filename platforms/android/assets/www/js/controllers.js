@@ -57,7 +57,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
 })
 
 //Controlador encargado de mostrar el mapa con el marcador de la localización actual y la ubicación de los CEAS
-.controller('WalkCtrl', function($scope, GeoService, Ceas, $cordovaGeolocation) {
+.controller('LpsCtrl', function($scope, GeoService, $cordovaGeolocation) {
 
   var lat;
   var long;
@@ -66,69 +66,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
   var id_captura = 'Ruta de prueba'; // Llave o nombre con el cual se va a almacenar la ruta actual
   var capturas = [];
 
-  // PRUEBA VELOCIDAD ===================================================================================================
-  // Funcionalidad botón Prueba algoritmo velocidad
-  /*$scope.testVelocity = testVelocity;
-  function testVelocity(){
-
-    function calculateSpeed(t1, lat1, lng1, t2, lat2, lng2) {
-      // From Caspar Kleijne's answer starts
-      if (typeof(Number.prototype.toRad) === "undefined") {
-        Number.prototype.toRad = function() {
-          return this * Math.PI / 180;
-        }
-      }
-      // From Caspar Kleijne's answer ends
-      // From cletus' answer starts
-      var R = 6371; // km
-      var dLat = (lat2-lat1).toRad();
-      var dLon = (lng2-lng1).toRad();
-      var lat1 = lat1.toRad();
-      var lat2 = lat2.toRad();
-
-      var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) *    Math.cos(lat2); 
-      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-      var distance = R * c;
-      // From cletus' answer ends
-
-      return distance / t2 - t1;
-    }
-
-    function firstGeolocationSuccess(position1) {
-      var t1 = Date.now();
-      alert("Disparado t1 "+t1);
-      navigator.geolocation.getCurrentPosition(
-        // Success
-        function (position2) {
-          var speed = calculateSpeed(t1/1000, position1.coords.latitude, position1.coords.longitude, Date.now()/1000, position2.coords.latitude, position2.coords.longitude);
-          alert("Disparado velocidad "+speed);
-        },
-        // Error
-        function(error){
-            console.log(error);
-        },
-        // Settings
-        {enableHighAccuracy: true}
-      )
-    }
-
-    navigator.geolocation.getCurrentPosition(
-      // Success
-      function(position){
-        firstGeolocationSuccess(position);
-      },
-      // Error
-      function(error){
-          console.log(error);
-      },
-      // Settings
-      {enableHighAccuracy: true}
-    );
-
-  }*/
-  // FIN PRUEBA VELOCIDAD ===================================================================================================
-
+  
   // Funcionalidad botón Iniciar Captura
   $scope.start = start;
   function start(){

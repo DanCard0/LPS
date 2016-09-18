@@ -1,26 +1,16 @@
 <!--
-Método encargado del menu principal
+Menu superior desplegado en pestañas
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
-
   
-  <!-- Mapa Tab -->
-  <ion-tab title="Mapa" icon-off="ion-ios-navigate-outline" icon-on="ion-ios-navigate" href="#/tab/map">
-    <ion-nav-view name="tab-map"></ion-nav-view>
-  </ion-tab>
-
-  <!-- Lista de CEAS Tab -->
-  <ion-tab title="CEAS" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/ceas">
-    <ion-nav-view name="tab-ceas"></ion-nav-view>
-  </ion-tab>
-
-   <!-- Lista de CEAS Tab -->
-  <ion-tab title="Mi ruta" icon-off="ion-android-walk" icon-on="ion-android-walk" href="#/tab/walk">
-    <ion-nav-view name="tab-walk"></ion-nav-view>
-  </ion-tab>
-
-  <ion-tab title="Historial rutas" icon-off="ion-android-walk" icon-on="ion-android-walk" href="#/tab/walkHistory">
+  <!-- Pestaña visor de LPS y detector de obstaculos -->
+  <ion-tab title="Detector" icon-off="ion-android-map" icon-on="ion-android-map" href="#/tab/walkHistory">
     <ion-nav-view name="tab-walkHistory"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Pestaña capturar puntos -->
+  <ion-tab title="Captura" icon-off="ion-android-navigate" icon-on="ion-android-navigate" href="#/tab/lps">
+    <ion-nav-view name="tab-lps"></ion-nav-view>
   </ion-tab>
 
 </ion-tabs>
