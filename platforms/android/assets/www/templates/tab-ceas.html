@@ -1,0 +1,12 @@
+<ion-view view-title="CEAs">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="cea in ceas" type="item-text-wrap" href="#/tab/ceas/{{cea.id}}">
+        <img ng-src="{{cea.imagePlace}}">
+        <h2>{{cea.name}}</h2>
+        <p>{{cea.address}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

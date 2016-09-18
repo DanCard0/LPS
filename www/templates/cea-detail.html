@@ -1,0 +1,35 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+
+  ng-click="updateRoute({{cea.latitude}}, {{cea.longitude}})"  
+-->
+
+<ion-view view-title="{{cea.name}}">
+  <ion-content class="padding">
+    
+
+    <div class="list_card">
+
+      <div class="item item-avatar">
+        <img ng-src="{{cea.imagePlace}}">
+        <h2>{{cea.name}}</h2>
+        <p>{{cea.address}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img ng-src="{{cea.imagePlace}}" style="width: 100%">
+        <p>Descripción del Cea</p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left" >
+        <button class="button button-clear button-positive icon ion-location" ng-click="goMap(cea.id)">
+          Mi ruta
+        </button>                
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

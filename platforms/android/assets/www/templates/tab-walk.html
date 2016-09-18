@@ -1,0 +1,22 @@
+<ion-view view-title="Camino" >
+
+  <ion-content class="padding">
+    <div>
+      <h2>Capturar ruta</h2>
+      <input style="display: none;" type="text" name="track_id" id="track_id" placeholder="Nombre ruta" value="Prueba">
+      <p id="info_captura"></p>
+      <!--button ng-click="testVelocity()" class="button">Prueba algoritmo velocidad</button-->
+      <button ng-click="start()" class="button button-positive">Iniciar captura</button>
+      <button ng-click="stop()" class="button button-positive">Detener captura</button>
+      <button ng-click="clearStorage()" class="button button-positive">Borrar rutas almacenadas</button>
+      <button ng-click="dummyStorage()" class="button button-positive">Insertar datos dummy</button>
+    </div>
+    
+    <div id="walkMap" >
+      <p>
+        Presione el botón Iniciar captura
+      </p>  
+    </div>     
+  </ion-content>
+  
+</ion-view>
