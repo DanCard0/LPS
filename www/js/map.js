@@ -72,15 +72,6 @@ function setMarkers(map, locations){
   return map;
 }
 
-//Función que define la animación de un marcador
-function toggleBounce() {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
-}
-
 /**
  Función encargada de definir las variables para trazar la ruta entre dos puntos  
   - @param divMode: id del elemento html donde se selecciona el modo transporte

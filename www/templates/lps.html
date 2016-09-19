@@ -2,20 +2,14 @@
 
   <ion-content class="padding">
     <div>
-      <input style="display: none;" type="text" name="track_id" id="track_id" placeholder="Nombre ruta" value="Prueba">
+      <input type="text" name="track_id" id="track_id" placeholder="Nombre del sitio">
       <p id="info_captura"></p>
       <!--button ng-click="testVelocity()" class="button">Prueba algoritmo velocidad</button-->
-      <button ng-click="start()" class="button button-positive">Iniciar captura</button>
-      <button ng-click="stop()" class="button button-positive">Detener captura</button>
-      <button ng-click="clearStorage()" class="button button-positive">Borrar rutas almacenadas</button>
-      <button ng-click="dummyStorage()" class="button button-positive">Insertar datos dummy</button>
+      <button ng-click="start()" class="button button-positive">Capturar punto</button>
+      <!--button ng-click="stop()" class="button button-positive">Detener captura</button-->
     </div>
     
-    <div id="walkMap" >
-      <p>
-        Presione el botón Iniciar captura
-      </p>  
-    </div>     
+    <div id="walkMap"></div>     
   </ion-content>
   
 </ion-view>
