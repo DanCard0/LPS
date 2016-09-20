@@ -27,6 +27,12 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.ionicframework.mapainterface657305"
+        },
+        "com.pylonproducts.wifiwizard": {
+            "PACKAGE_NAME": "com.ionicframework.mapainterface657305"
+        },
+        "cordova-wifiinfo-plugin": {
+            "PACKAGE_NAME": "com.ionicframework.mapainterface657305"
         }
     },
     "dependent_plugins": {

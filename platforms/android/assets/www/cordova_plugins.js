@@ -46,6 +46,22 @@ module.exports = [
         "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
         "pluginId": "cordova-plugin-geolocation",
         "runs": true
+    },
+    {
+        "id": "com.pylonproducts.wifiwizard.WifiWizard",
+        "file": "plugins/com.pylonproducts.wifiwizard/www/WifiWizard.js",
+        "pluginId": "com.pylonproducts.wifiwizard",
+        "clobbers": [
+            "window.WifiWizard"
+        ]
+    },
+    {
+        "id": "cordova-wifiinfo-plugin.WifiInfo",
+        "file": "plugins/cordova-wifiinfo-plugin/www/WifiInfo.js",
+        "pluginId": "cordova-wifiinfo-plugin",
+        "clobbers": [
+            "WifiInfo"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -58,7 +74,9 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.2.2",
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-compat": "1.0.0",
-    "cordova-plugin-geolocation": "2.2.0"
+    "cordova-plugin-geolocation": "2.2.0",
+    "com.pylonproducts.wifiwizard": "0.2.11",
+    "cordova-wifiinfo-plugin": "0.1.0"
 };
 // BOTTOM OF METADATA
 });

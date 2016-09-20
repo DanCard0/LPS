@@ -22,6 +22,13 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
+    <feature name="WifiWizard">
+        <param name="android-package" value="com.pylonproducts.wifiwizard.WifiWizard" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="WifiInfo">
+        <param name="android-package" value="org.apache.cordova.android.Wifi" />
+    </feature>
     <name>Indoor Positioning</name>
     <description>
         Mobile app for Indoor Positioning System Prototype

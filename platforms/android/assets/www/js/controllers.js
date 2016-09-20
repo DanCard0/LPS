@@ -66,13 +66,26 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
   var id_captura = 'Ruta de prueba'; // Llave o nombre con el cual se va a almacenar la ruta actual
   var capturas = [];
 
+  $( document ).ready(function() {
+    $( "#iniciar" ).on( "click", function() {
+        function success(results) {
+          console.log(JSON.stringify(results));
+        };
+        
+        function err(e) {
+          console.log(JSON.stringify(e));
+        };
+
+        WifiInfo.getWifiInfo(success,err);
+    });
+  });
   
   // Funcionalidad botón Iniciar Captura
   $scope.start = start;
   function start(){
-    htmlInfo.innerHTML = "Captura iniciada";
+    htmlInfo.innerHTML = "Punto capturado";
 
-    GeoService.getPosition()
+    /*GeoService.getPosition()
       .then(function(position) {
         
         $scope.coords = position.coords;
@@ -101,7 +114,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
           id_captura = $("#track_id").val();  
           $("#track_id").hide();
         }
-      );
+      );*/
   }
 
   // Funcionalidad botón Detener Captura
@@ -176,13 +189,11 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
   // Cuenta el número de rutas guardadas y las muestra al cliente
   var num_rutas_guardadas = window.localStorage.length;
 
-  $("#tracks_recorded").html("<strong>" + num_rutas_guardadas + "</strong> rutas guardadas");
   // Empty the list of recorded tracks
   $("#history_tracklist").empty();
 
   // Iterate over all of the recorded tracks, populating the list
   for(i=0; i<num_rutas_guardadas; i++){
-
     
     $("#history_tracklist").append("<li><a class='action' data-key='"+window.localStorage.key(i)+"'>" + window.localStorage.key(i) + "</a></li>");
   }
