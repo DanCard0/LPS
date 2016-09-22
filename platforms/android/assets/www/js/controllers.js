@@ -6,7 +6,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
   var long;
   var captura_actual = null;
   var htmlInfo = document.getElementById('info_captura');
-  var id_captura = 'Ruta de prueba'; // Llave o nombre con el cual se va a almacenar la ruta actual
+  var id_captura = 0; // Llave o nombre con el cual se va a almacenar la captura actual
   var capturas = [];
 
   $( document ).ready(function() {
@@ -41,7 +41,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
           
           $scope.coords = position.coords;
           $scope.map = showMap(position.coords, 'captureMap');
-          $scope.map = setMarker($scope.map, $scope.coords.latitude, $scope.coords.longitude, "Localización" , false);
+          $scope.map = setMarker($scope.map, $scope.coords.latitude, $scope.coords.longitude, "Localización" , true);
 
         }, function(err) {
           console.log('getCurrentPosition error: ' + angular.toJson(err));
