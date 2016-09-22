@@ -33,6 +33,10 @@
         },
         "cordova-wifiinfo-plugin": {
             "PACKAGE_NAME": "com.ionicframework.mapainterface657305"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "254785439894",
+            "PACKAGE_NAME": "com.ionicframework.mapainterface657305"
         }
     },
     "dependent_plugins": {
