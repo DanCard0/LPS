@@ -62,6 +62,14 @@ module.exports = [
         "clobbers": [
             "WifiInfo"
         ]
+    },
+    {
+        "id": "phonegap-plugin-push.PushNotification",
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "pluginId": "phonegap-plugin-push",
+        "clobbers": [
+            "PushNotification"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -76,7 +84,8 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.0.0",
     "cordova-plugin-geolocation": "2.2.0",
     "com.pylonproducts.wifiwizard": "0.2.11",
-    "cordova-wifiinfo-plugin": "0.1.0"
+    "cordova-wifiinfo-plugin": "0.1.0",
+    "phonegap-plugin-push": "1.8.2"
 };
 // BOTTOM OF METADATA
 });
