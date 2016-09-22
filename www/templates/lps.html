@@ -2,15 +2,14 @@
 
   <ion-content class="padding">
     <div>
-      <input type="text" name="track_id" id="track_id" placeholder="Nombre del sitio">
-      <p id="info_captura"></p>
-      <p id="info_captura2"></p>
+      <!--input type="text" name="track_id" id="track_id" placeholder="Nombre del sitio"-->
+      <button id="iniciar" class="button button-positive">Capturar punto</button>
       
-      <button ng-click="start()" class="button button-positive">Capturar punto</button>
-      <button id="iniciar" class="button button-positive">Capturar punto 2</button>
+      <p id="info_captura"></p>
+      <p id="info_gps"></p>
     </div>
     
-    <div id="walkMap"></div>     
+    <div id="captureMap" style="height:500px"></div>  
   </ion-content>
   
 </ion-view>
