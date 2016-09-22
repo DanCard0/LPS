@@ -1,6 +1,5 @@
 angular.module('starter.controllers', ['ionic', 'ngCordova'])
 
-//Controlador encargado de mostrar el mapa con el marcador de la localización actual y la ubicación de los CEAS
 .controller('LocationCtrl', function($scope, GeoService, Ceas) {
 
   GeoService.getPosition()
@@ -19,44 +18,6 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
     });  
 })
 
-
-//Controlador encargado de mostrar la lista de los CEAs
-.controller('CeasCtrl', function($scope, Ceas) {
-  $scope.ceas = Ceas.all();
-
-  $scope.remove = function(ceas) {
-    Ceas.remove(cea);
-  };
-})
-
-//Controlador encargado de mostrar los detalles de los CEAs
-.controller('CeaDetailCtrl', function($scope, $stateParams, Ceas, $state) {
-  $scope.cea = Ceas.get($stateParams.ceaId);
-
-  $scope.goMap = function(ceaId){
-    $state.go('tab.cea-route',{ceaId:ceaId});   
-  }  
-})
-
-//Controlador encargado de mostrar la ruta de la ubicación actual al CEA prevamente seleccionado
-.controller('RouteCtrl', function($scope, GeoService, Ceas, $stateParams) {
-
-  GeoService.getPosition()
-    .then(function(position) {
-      
-      $scope.ceas = Ceas.all();
-      $scope.ceaRoute = Ceas.get($stateParams.ceaId);
-      $scope.coords = position.coords;
-      $scope.map = showMap(position.coords, 'mapRoute');      
-      
-      routeTwoPoints("mode", $scope.map, $scope.coords, $scope.ceaRoute, false);      
-
-    }, function(err) {
-      console.log('getCurrentPosition error: ' + angular.toJson(err));
-    });
-})
-
-//Controlador encargado de mostrar el mapa con el marcador de la localización actual y la ubicación de los CEAS
 .controller('LpsCtrl', function($scope, GeoService, $cordovaGeolocation) {
 
   var lat;
@@ -162,7 +123,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
       });
   }
 
-  // Funcionalidad botón Borrar rutas almacenadas
+  // Limpiar almacenamiento local
   $scope.clearStorage = clearStorage;
   function clearStorage(){
     
@@ -170,11 +131,10 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
     window.localStorage.clear();
   }
 
-  // Funcionalidad botón Insertar datos dummy
+  // Insertar datos dummy
   $scope.dummyStorage = dummyStorage;
   function dummyStorage(){
     
-    htmlInfo.innerHTML = "Datos dummy insertados";
     window.localStorage.setItem('PruebaDummy',
       '[{"timestamp":1335700802000, "coords":{"heading":null,"altitude":null,"longitude":170.33488333333335,"accuracy":0,"latitude":-45.87475166666666,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700803000,"coords":{"heading":null,"altitude":null,"longitude":170.33481666666665,"accuracy":0,"latitude":-45.87465,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700804000,"coords":{"heading":null,"altitude":null,"longitude":170.33426999999998,"accuracy":0,"latitude":-45.873708333333326,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700805000,"coords":{"heading":null,"altitude":null,"longitude":170.33318333333335,"accuracy":0,"latitude":-45.87178333333333,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700806000,"coords":{"heading":null,"altitude":null,"longitude":170.33416166666666,"accuracy":0,"latitude":-45.871478333333336,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700807000,"coords":{"heading":null,"altitude":null,"longitude":170.33526833333332,"accuracy":0,"latitude":-45.873394999999995,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700808000,"coords":{"heading":null,"altitude":null,"longitude":170.33427333333336,"accuracy":0,"latitude":-45.873711666666665,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700809000,"coords":{"heading":null,"altitude":null,"longitude":170.33488333333335,"accuracy":0,"latitude":-45.87475166666666,"speed":null,"altitudeAccuracy":null}}]');
   }
@@ -182,7 +142,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
 })
 
 
-.controller('WalkHistoryCtrl', function($scope, GeoService, Ceas) {
+.controller('WalkHistoryCtrl', function($scope, GeoService) {
 
   var htmlInfo = document.getElementById('info_captura');
 
