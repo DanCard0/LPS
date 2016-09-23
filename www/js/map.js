@@ -10,7 +10,6 @@ function showMap(coords, divMap) {
     center: { lat: coords.latitude, lng: coords.longitude},
     zoom: 16
   };
-  alert(coords+" "+divMap);
   var map = new google.maps.Map(document.getElementById(divMap), mapOptions);
 
   return map;

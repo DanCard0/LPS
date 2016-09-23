@@ -14,14 +14,27 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
       // =====================================================================================
       function listHandler(a){
         console.log(JSON.stringify(a));
+        var networkCounter = 0;
 
         for (var i = 0; i < a.length; i++) {
-          if (a[i].SSID.indexOf("Movistar") !== -1) {
+          if (a[i].SSID.indexOf("ProTif") !== -1) {
+            networkCounter++;
             $("#info_captura").append('<strong>Red:</strong> '+a[i].SSID+
-                                      ' <strong>Potencia (dBm):</strong> '+a[i].level+'<br>');
+                                      ' <strong>Potencia (dBm):</strong> '+a[i].level+'<br><br>');
             //window.localStorage.setItem(id_captura, JSON.stringify(results));
           }
-        }        
+        }
+
+        if (networkCounter < 4 && networkCounter != 0) {
+          $("#info_captura").append('<strong><font color="red">Estaciones fijas incompletas</font></strong><br><br>');
+          networkCounter = 0;
+        } else if (networkCounter == 0) {
+          $("#info_captura").append('<strong><font color="red">No se ha podido localizar ninguna de las estaciones fijas. Intentar de nuevo</font></strong><br><br>');
+          networkCounter = 0;
+        }
+        else {
+          networkCounter = 0;
+        }
       };
       
       function fail(e) {
