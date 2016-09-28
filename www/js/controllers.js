@@ -21,7 +21,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
             networkCounter++;
             $("#info_captura").append('<strong>Red:</strong> '+a[i].SSID+
                                       ' <strong>Potencia (dBm):</strong> '+a[i].level+'<br><br>');
-            //window.localStorage.setItem(id_captura, JSON.stringify(results));
+            window.localStorage.setItem(id_captura, JSON.stringify(results));
           }
         }
 
@@ -46,19 +46,6 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
 
       // =====================================================================================
 
-      GeoService.getPosition()
-        .then(function(position) {
-          alert($scope.coords.latitude);
-          $("#info_captura").append('<strong>Latitud:</strong> '+$scope.coords.latitude+
-                                    ' <strong>Longitud:</strong> '+$scope.coords.longitude);
-          
-          $scope.coords = position.coords;
-          $scope.map = showMap(position.coords, 'captureMap');
-          $scope.map = setMarker($scope.map, $scope.coords.latitude, $scope.coords.longitude, "Localización" , true);
-
-        }, function(err) {
-          console.log('getCurrentPosition error: ' + angular.toJson(err));
-        });
      });
   });
   
@@ -67,36 +54,7 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
   function start(){
     htmlInfo.innerHTML = "Punto capturado";
 
-    GeoService.getPosition()
-      .then(function(position) {
-        
-        $scope.coords = position.coords;
-        $scope.map = showMap(position.coords, 'walkMap');
-        //$scope.map = setMarker($scope.map, $scope.coords.latitude, $scope.coords.longitude, "Mi localización" , false);
-
-      }, function(err) {
-        console.log('getCurrentPosition error: ' + angular.toJson(err));
-      });
-
-    captura_actual = GeoService.getWatch()
-      .then(
-        null,
-        function(err) {
-          alert("Hubo un error en la captura de la posición: "+err);
-        },
-        function(position) {
-          capturas.push(position);
-
-          lat  = position.coords.latitude
-          long = position.coords.longitude
-          //$scope.map = showMap(position.coords, 'walkMap');
-          $scope.map = setMarker($scope.map, lat, long, "Mi localización", true);
-
-          // Id de la captura actual ingresado por el cliente
-          id_captura = $("#track_id").val();  
-          $("#track_id").hide();
-        }
-      );
+    
   }
 
   // Limpiar almacenamiento local
@@ -138,5 +96,22 @@ angular.module('starter.controllers', ['ionic', 'ngCordova'])
       }, function(err) {
         console.log('getCurrentPosition error: ' + angular.toJson(err));
       });
+0098918003301
+    captura_actual = GeoService.getWatch()
+      .then(
+        null,
+        function(err) {
+          alert("Hubo un error en la captura de la posición: "+err);
+        },
+        function(position) {
+          //capturas.push(position);
+
+          lat  = position.coords.latitude
+          long = position.coords.longitude
+          console.log("captura realizada");
+          //$scope.map = showMap(position.coords, 'walkMap');
+          $scope.map = setMarker($scope.map, lat, long, "Mi localización", true);
+        }
+      );
   });   
 })

@@ -23,6 +23,41 @@
         <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.0.2_c23a56c27b4bd557297d7d0bca136fb393312395.jar" />
     </item>
     <item
+        jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="2bf893856577f5038c0b8007a43fda3b3c5beb23">
+        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v13-23.4.0_e3788a72bf30421676f4a60949f1ea361109fde3.jar" />
+    </item>
+    <item
+        jar="/home/dancard_cit/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_86185b687f52930094442d95d95ee4190a19240e.jar" />
+    </item>
+    <item
+        jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="64cb93400b4744ee7c9c37ed0fc7fa181e9130fd">
+        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_b66e2aaf0f164a58b0fec591fd05ebbb72931cf5.jar" />
+    </item>
+    <item
+        jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="be09545b7e6ff322c7286d2e80bed3b75b76c529">
+        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_5dd642ad830225332e6016104c0261da95532d33.jar" />
+    </item>
+    <item
+        jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.0.2_1570eeae5deb4765d745f9071682518be7d6613e.jar" />
+    </item>
+    <item
         jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
         jumboMode="false"
         revision="24.0.1"
@@ -37,39 +72,11 @@
         <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_6ae9cd9c38730c25e906607d793078f4b8a55c80.jar" />
     </item>
     <item
-        jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="2bf893856577f5038c0b8007a43fda3b3c5beb23">
-        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v13-23.4.0_e3788a72bf30421676f4a60949f1ea361109fde3.jar" />
-    </item>
-    <item
         jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.0.2/jars/classes.jar"
         jumboMode="false"
         revision="24.0.1"
         sha1="e6970f0554f9508c041f1f6960af15cc888c9f35">
         <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-9.0.2_79229e9d2edf9099b6d1e430b64a92da46e901f2.jar" />
-    </item>
-    <item
-        jar="/home/dancard_cit/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_86185b687f52930094442d95d95ee4190a19240e.jar" />
-    </item>
-    <item
-        jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="bc60eb37d8504a7bde249cca7b5e239cf1a2f1a8">
-        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_b66e2aaf0f164a58b0fec591fd05ebbb72931cf5.jar" />
-    </item>
-    <item
-        jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="be09545b7e6ff322c7286d2e80bed3b75b76c529">
-        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_5dd642ad830225332e6016104c0261da95532d33.jar" />
     </item>
     <item
         jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/jars/classes.jar"
@@ -84,13 +91,6 @@
         revision="24.0.1"
         sha1="94d9cedd04b124aed044ac71c451a292856d854c">
         <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.0.2_727cadd05404ae61d69fca8ac15fa4212372ad72.jar" />
-    </item>
-    <item
-        jar="/home/dancard_cit/LPS/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
-        <dex dex="/home/dancard_cit/LPS/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.0.2_1570eeae5deb4765d745f9071682518be7d6613e.jar" />
     </item>
 
 </items>

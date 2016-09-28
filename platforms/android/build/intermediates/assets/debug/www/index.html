@@ -40,7 +40,7 @@
 
         push.on('notification', function(data) {
           console.log(data.message);
-          alert(data.title+" Message: " +data.message);
+          alert(data.title+": " +data.message);
         });
 
         push.on('error', function(e) {
